@@ -10,6 +10,29 @@ The minimum curvature line is quite near to a minimum time line in corners but w
 acceleration limits are not exploited. However, the minimum time optimization requires a lot more parameters and takes
 more computation time. Please look into the `main_globaltraj.py` for all possible options.
 
+# Simple Usage (for Automotive AI challenge2023 challenger)
+```
+git clone git@github.com:tamago117/AIchallenge2023_racetrajectory_optimization.git
+cd AIchallenge2023_racetrajectory_optimization
+pip3 install -r requirements.txt
+
+python3 main_globaltraj.py
+```
+outputs内にtraj_race_cl.csvが生成されているのでそれを[ここ](https://github.com/hrjp/aichallenge2023-racing/tree/main/docker/aichallenge/aichallenge_ws/src/aichallenge_submit/aichallenge_submit_launch/map)に配置する．
+
+# course input (for Automotive AI challenge2023 challenger)
+このリポジトリ内に配置されている２つのcsvがもともとAIchallengeで配布されている[場所](https://github.com/AutomotiveAIChallenge/aichallenge2023-racing/tree/main/docker/aichallenge/aichallenge_ws/src/aichallenge_submit/aichallenge_submit_launch/map/sample_scripts/outline)
+```
+AIchallenge2023_racetrajectory_optimization
+|
+| - converted_inner_track_line.csv
+| - converted_outer_track_line.csv
+```
+それを以下のプログラムでこの最適化ツール用の入力形式に変換している
+```
+python3 ai_challenge_converter.py
+```
+
 # List of components
 * `frictionmap`: This package contains the functions related to the creation and handling of friction maps along the
 race track.

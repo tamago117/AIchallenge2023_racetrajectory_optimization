@@ -40,8 +40,9 @@ plot_opts = {"mincurv_curv_lin": False,         # plot curv. linearization (orig
 # select track file (including centerline coordinates + track widths) --------------------------------------------------
 # file_paths["track_name"] = "rounded_rectangle"                              # artificial track
 # file_paths["track_name"] = "handling_track"                                 # artificial track
-file_paths["track_name"] = "berlin_2018"                                    # Berlin Formula E 2018
+#file_paths["track_name"] = "berlin_2018"                                    # Berlin Formula E 2018
 # file_paths["track_name"] = "modena_2019"                                    # Modena 2019
+file_paths["track_name"] = "ai_challenge"                                    # AI Challenge 2023
 
 # set import options ---------------------------------------------------------------------------------------------------
 imp_opts = {"flip_imp_track": False,                # flip imported track to reverse direction
@@ -98,7 +99,7 @@ if opt_type == "mintime" and not mintime_opts["recalc_vel_profile_by_tph"] and l
 
 # get current path
 file_paths["module"] = os.path.dirname(os.path.abspath(__file__))
-
+"""
 # read dependencies from requirements.txt
 requirements_path = os.path.join(file_paths["module"], 'requirements.txt')
 dependencies = []
@@ -112,7 +113,7 @@ with open(requirements_path, 'r') as fh:
 
 # check dependencies
 pkg_resources.require(dependencies)
-
+"""
 # ----------------------------------------------------------------------------------------------------------------------
 # INITIALIZATION OF PATHS ----------------------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------
